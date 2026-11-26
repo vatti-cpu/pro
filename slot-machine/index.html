@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html data-version="0.0.250" data-landing-name="slot-machine" data-env="production-archive" data-js-version="2-Jie4TtderZ7x4rbgxn9c1nY7ou8MkA09FYYnS8D9xaACw" data-ag="false" lang="en" data-land-id="641">
+
+<head>
+    <script>
+        var APP_CONFIG = {
+            "domain": "https://yzwtz.com",
+            "mainExit_currentTab_zoneId": 12355240,
+            "mainExit_newTab_zoneId": 12355239,
+            "reverse_zoneId": 12355238,
+            "push_zoneId": 12355243,
+            "autoexit_zoneId": 12355241,
+            "autoexit_timeToRedirect": 90,
+            "back_zoneId": 12355242,
+            "back_count": 10,
+            "tabUnderClick_zoneId": 12355244
+        };
+    </script>
+    <script>"use strict";(()=>{var M=()=>{let e=new Date,t=e.getUTCFullYear(),r=String(e.getUTCMonth()+1).padStart(2,"0"),n=String(e.getUTCDate()).padStart(2,"0"),i=String(e.getUTCHours()).padStart(2,"0"),c=String(e.getUTCMinutes()).padStart(2,"0"),l=String(e.getUTCSeconds()).padStart(2,"0"),a=String(e.getUTCMilliseconds()*1e3).padStart(6,"0");return`${t}-${r}-${n} ${i}:${c}:${l}.${a} +00:00`};var u={local:new Map,session:new Map},F=e=>e==="local"?window.localStorage:window.sessionStorage,m=(e,t,r)=>{var i;let n=null;try{n=F(e).getItem(t)}catch(c){r==null||r(c)}return u[e].has(t)?(i=u[e].get(t))!=null?i:null:n},p=(e,t,r,n)=>{try{F(e).setItem(t,r),u[e].delete(t)}catch(i){u[e].set(t,r),n==null||n(i)}};var H="events_history",d=!1,_=!1,z=(e,t)=>{var r;(r=window.syncMetric)==null||r.call(window,{event:"error",errorMessage:t instanceof Error?t.message:String(t),errorType:"CUSTOM",errorSubType:e})},C=e=>t=>{d||(d=!0,z(e,t))},Se=e=>{if(!_){_=!0;try{z("EventsHistoryGet",e)}finally{_=!1}}},y=()=>{if(d)return[];let e=m("session",H,C("EventsHistoryGet"));if(d||!e)return[];try{return JSON.parse(e)}catch(t){return Se(t),[]}},G=e=>{d||p("session",H,JSON.stringify(e),C("EventsHistorySave"))};var Te={nb:"no",nn:"no"},O=()=>{var i;let e=window.location.search,t=new URLSearchParams(e).get("lang"),r=navigator.language.split("-")[0],n=t||r||"en";return(i=Te[n])!=null?i:n};var U=(e="design")=>{var r;let t=(r=new URL(window.location.href).searchParams.get(e))==null?void 0:r.trim();return t==="default"?"":t||APP_CONFIG.design||""};var h=(e,t)=>{var r;return(r=t.map(n=>e.get(n)).find(n=>!!n))!=null?r:null},we=e=>e&&/^\d+$/.test(e)?Number(e):null,L=e=>{let t=e.get("ymid");return{sub_id:h(e,["var_1","s"]),source_zone_id:we(h(e,["var_2","z"])),request_var:h(e,["var_3","var"]),...t?{ymid:t}:{}}};var s=new URL(window.location.href),J,k,$,V,B,K,R,j,q,Y,Q,A,Z,W,X,ee,te,re,ne,f={pz:(J=s.searchParams.get("pz"))!=null?J:"",tb:(k=s.searchParams.get("tb"))!=null?k:"",tb_reverse:($=s.searchParams.get("tb_reverse"))!=null?$:"",ae:(V=s.searchParams.get("ae"))!=null?V:"",z:(B=s.searchParams.get("z"))!=null?B:"",var:(K=s.searchParams.get("var"))!=null?K:"",var_1:(R=s.searchParams.get("var_1"))!=null?R:"",var_2:(j=s.searchParams.get("var_2"))!=null?j:"",var_3:(q=s.searchParams.get("var_3"))!=null?q:"",b:(Y=s.searchParams.get("b"))!=null?Y:"",campaignid:(Q=s.searchParams.get("campaignid"))!=null?Q:"",abtest:(A=s.searchParams.get("abtest"))!=null?A:"",rhd:(Z=s.searchParams.get("rhd"))!=null?Z:"1",s:(W=s.searchParams.get("s"))!=null?W:"",ymid:(X=s.searchParams.get("ymid"))!=null?X:"",wua:(ee=s.searchParams.get("wua"))!=null?ee:"",use_full_list_or_browsers:(te=s.searchParams.get("use_full_list_or_browsers"))!=null?te:"",cid:(re=s.searchParams.get("cid"))!=null?re:"",geo:(ne=s.searchParams.get("geo"))!=null?ne:""};var De=()=>{var e,t;return typeof document<"u"&&((t=(e=document.documentElement)==null?void 0:e.dataset)==null?void 0:t.jsVersion)||""};var Ee={start:"start",ageExit:"age_exit",mainExit:"main_exit",push:"push",autoexit:"autoexit",back:"back",reverse:"reverse",tabUnderClick:"tab_under_click",error:"error",unhandledRejection:"unhandled_rejection"},Ie=M(),Pe=L(new URL(window.location.href).searchParams),Ne=()=>f.abtest?f.abtest:APP_CONFIG.abtest?String(APP_CONFIG.abtest):void 0,se=({event:e,exitZoneId:t,errorMessage:r,errorSubType:n,errorType:i,skipHistory:c,contextExtra:l})=>{var P,N,x;let a=(P=document.querySelector("html"))==null?void 0:P.dataset,de=(a==null?void 0:a.landingName)||"",ue=(a==null?void 0:a.version)||"",me=(a==null?void 0:a.env)||"",pe=(a==null?void 0:a.ag)==="true",T=a==null?void 0:a.publication,w=U(),ve=window.location.host,D=Ee[e]||e,_e=O(),ye=30,E=Date.now(),g=y(),I=g[g.length-1],he=I?E-I.currentTs:0;c||(g.push({currentTs:E,eventName:D,delta:he}),g.length>=ye&&g.shift(),G(g));let fe=[{app:"landings-constructor",event:D,language:_e,landing_name:de,build_version:ue,landing_domain:ve,landing_url:window.location.href,exit_zone_id:t?Number(t):void 0,...Pe,landing_load_date_time:Ie,error_message:r!=null?r:"",ab2r:Ne(),event_history:(N=JSON.stringify({event_history:JSON.parse(JSON.stringify(y()))}))!=null?N:null,context:JSON.stringify({ag:pe,...T?{publication:T}:{},...w?{design:w}:{},...l!=null?l:{}}),error_sub_type:n,error_type:i,env:me,js_version:De()}],be=(x=APP_CONFIG.isAnalyticEnabled)!=null?x:!0;return{eventData:fe,isAnalyticEnabled:be}};var v="usid",xe=/^[0-9a-f]{1,32}$/,Me=["tufc","step","intent-id","iawv"],ae=e=>Me.some(t=>e.has(t)),ie=e=>e!==null&&xe.test(e);var o="",oe=()=>{p("session",v,o)},b=()=>{var r;if(o)return o;let e=new URL(window.location.href).searchParams,t=e.get(v);return ie(t)&&ae(e)?(o=t,oe(),o):(o=(r=m("session",v))!=null?r:"",o||(o=Date.now().toString(16)+Math.random().toString(16).substring(2,14),oe()),o)};function S({url:e,data:t}){var n;return((n=window==null?void 0:window.navigator)==null?void 0:n.sendBeacon(e.toString(),t?JSON.stringify(t):void 0))?Promise.resolve():Promise.reject(new Error("sendBeacon failed"))}var ce=e=>{let t;(c=>c[c.BAD_REQUEST=400]="BAD_REQUEST")(t||(t={}));let r="https://wuytl.com",n=new URL(`${r}/sync-metrics`);S({url:n,data:e}).catch(i=>{i.status!==400&&S({url:n,data:e}).catch(()=>{console.error(`Metrics sync failed: ${e}`)})})};var ge=()=>({usid:b()}),le=e=>{let{eventData:t,isAnalyticEnabled:r}=se(e);r&&ce(t.map(n=>({...n,...ge()})))};window.syncMetric=le;window.staticLandMetricIds=ge;b();le({event:"start"});})();</script>
+    <script>"use strict";(()=>{var m=()=>{let e=new Date,a=e.getUTCFullYear(),s=String(e.getUTCMonth()+1).padStart(2,"0"),i=String(e.getUTCDate()).padStart(2,"0"),t=String(e.getUTCHours()).padStart(2,"0"),o=String(e.getUTCMinutes()).padStart(2,"0"),c=String(e.getUTCSeconds()).padStart(2,"0"),n=String(e.getUTCMilliseconds()*1e3).padStart(6,"0");return`${a}-${s}-${i} ${t}:${o}:${c}.${n} +00:00`};var g=(e,a)=>{var s;return(s=a.map(i=>e.get(i)).find(i=>!!i))!=null?s:null},k=e=>e&&/^\d+$/.test(e)?Number(e):null,p=e=>{let a=e.get("ymid");return{sub_id:g(e,["var_1","s"]),source_zone_id:k(g(e,["var_2","z"])),request_var:g(e,["var_3","var"]),...a?{ymid:a}:{}}};var r=new URL(window.location.href),v,y,_,h,b,f,E,S,w,T,P,N,x,C,D,I,O,H,F,J={pz:(v=r.searchParams.get("pz"))!=null?v:"",tb:(y=r.searchParams.get("tb"))!=null?y:"",tb_reverse:(_=r.searchParams.get("tb_reverse"))!=null?_:"",ae:(h=r.searchParams.get("ae"))!=null?h:"",z:(b=r.searchParams.get("z"))!=null?b:"",var:(f=r.searchParams.get("var"))!=null?f:"",var_1:(E=r.searchParams.get("var_1"))!=null?E:"",var_2:(S=r.searchParams.get("var_2"))!=null?S:"",var_3:(w=r.searchParams.get("var_3"))!=null?w:"",b:(T=r.searchParams.get("b"))!=null?T:"",campaignid:(P=r.searchParams.get("campaignid"))!=null?P:"",abtest:(N=r.searchParams.get("abtest"))!=null?N:"",rhd:(x=r.searchParams.get("rhd"))!=null?x:"1",s:(C=r.searchParams.get("s"))!=null?C:"",ymid:(D=r.searchParams.get("ymid"))!=null?D:"",wua:(I=r.searchParams.get("wua"))!=null?I:"",use_full_list_or_browsers:(O=r.searchParams.get("use_full_list_or_browsers"))!=null?O:"",cid:(H=r.searchParams.get("cid"))!=null?H:"",geo:(F=r.searchParams.get("geo"))!=null?F:""};var ce=m(),ge=p(new URL(window.location.href).searchParams);var G=(n=>(n.Error="Error",n.RangeError="RangeError",n.ReferenceError="ReferenceError",n.SecurityError="SecurityError",n.SyntaxError="SyntaxError",n.TypeError="TypeError",n.Unknown="Unknown",n))(G||{}),z=(s=>(s.rejectionhandled="rejectionhandled",s.unhandledrejection="unhandledrejection",s))(z||{}),L=()=>{let e=window.syncMetric;if(!e){console.log("Sync metric is not initialized");return}let a=()=>{var o;(((o=document.querySelector("html"))==null?void 0:o.getAttribute("data-env"))||"")==="production-archive"&&!Object.keys(APP_CONFIG).length&&(console.error("Empty APP_CONFIG!",APP_CONFIG),e({event:"error",errorMessage:"Empty APP_CONFIG",errorSubType:"EmptyAppConfig",errorType:"CUSTOM"}))},s=t=>{if(t.filename.includes("extension"))return;let o=`errorMessage: ${t.message}, lineNumber: ${t.lineno}, columnNumber: ${t.colno}, file: ${t.filename}`,c=t.error.name&&Object.values(G).includes(t.error.name)?t.error.name:"Unknown";e({event:"error",errorMessage:o,errorSubType:c,errorType:"JS"})},i=t=>{var l,d,u;if(typeof t.reason=="object"&&((d=(l=t.reason)==null?void 0:l.stack)!=null&&d.includes("extension")))return;let o=typeof t.reason=="object"&&((u=t.reason)!=null&&u.message)?t.reason.message:JSON.stringify(t.reason),c=t.type,n=Object.values(z).includes(c)?c:"Unknown";e({event:"unhandledRejection",errorMessage:o,errorSubType:n,errorType:"JS"})};window.addEventListener("error",s),window.addEventListener("unhandledrejection",i),window.addEventListener("DOMContentLoaded",a)};L();})();</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <title data-translate="congratulations">Congratulations!</title>
+    <meta name="description" content="Spin the slot and discover what you can get" />
+    <link rel="stylesheet" id="main-css" href="./assets/styles/style.css">
+    <script defer src="./assets/scripts/common.js"></script>
+    <!-- UNCOMMENT SCRIPTS BELLOW AND COMMENT LINE ABOVE, IF YOU WANT TO CUSTOMIZE FEATURES-->
+    <!--
+        <script type="module" defer src="./assets/scripts/autoexit.js"></script>
+        <script type="module" defer src="./assets/scripts/appSdk.js"></script>
+        <script type="module" defer src="./assets/scripts/reverse.js"></script>
+        <script type="module" defer src="./assets/scripts/pushScript.js"></script>
+        <script type="module" defer src="./assets/scripts/translateElements.js"></script>
+        <script type="module" defer src="./assets/scripts/main.js"></script>
+    -->
+</head>
+
+<body>
+    <main class="slot-page" id="slotPage">
+        <div class="tab-under-overlay" id="tabUnderOverlay"></div>
+
+        <header class="slot-header">
+            <h1 class="slot-header-title" data-translate="spin_wheel_and_see">
+                Spin the slot and discover what you can get!
+            </h1>
+        </header>
+
+        <div class="slot-timer">
+            <span class="slot-timer-label" data-translate="time_remaining">Time Remaining:</span>
+            <span class="slot-timer-value" id="slotTimerValue">00:50:000</span>
+        </div>
+
+        <div class="start-modal" id="startModal">
+            <div class="start-modal-window">
+                <h2 class="start-modal-title" data-translate="congratulations">Congratulations!</h2>
+                <p class="start-modal-description" data-translate="you_have_won_see_what_you_can">
+                    You’ve won 3 spins! See what you can get.
+                </p>
+                <button type="button" class="start-modal-button" id="startModalButton" data-translate="start">
+                    start
+                </button>
+            </div>
+        </div>
+
+        <div class="full-page-click" id="fullPageClick"></div>
+
+        <section class="slot-machine">
+            <div class="spins-left">
+                <span class="spins-left-label" data-translate="you_have">You have</span>
+                <span class="spins-left-count" id="spinsLeftCount">3</span>
+                <span class="spins-left-suffix" data-translate="free_spins">Free Spins</span>
+            </div>
+
+            <div class="reels">
+                <div class="reel">
+                    <div class="reel-track" id="reelTrack1"></div>
+                    <div class="reel-highlight"></div>
+                    <div class="reel-shadow-top"></div>
+                    <div class="reel-shadow-bottom"></div>
+                </div>
+                <div class="reel">
+                    <div class="reel-track" id="reelTrack2"></div>
+                    <div class="reel-highlight"></div>
+                    <div class="reel-shadow-top"></div>
+                    <div class="reel-shadow-bottom"></div>
+                </div>
+                <div class="reel">
+                    <div class="reel-track" id="reelTrack3"></div>
+                    <div class="reel-highlight"></div>
+                    <div class="reel-shadow-top"></div>
+                    <div class="reel-shadow-bottom"></div>
+                </div>
+
+                <div class="reels-payline">
+                    <img src="./assets/images/triangle-right.webp" alt="payline marker" class="reels-payline-marker-left" />
+                    <img src="./assets/images/triangle-left.webp" alt="payline marker" class="reels-payline-marker-right" />
+                </div>
+            </div>
+
+            <div class="spin-modal" id="spinModal">
+                <div class="spin-modal-window">
+                    <div class="spin-modal-retry">
+                        <div class="spin-modal-texts spin-modal-texts-first">
+                            <h3 class="spin-modal-title" data-translate="bad_luck_try_again">
+                                Bad luck. Try again!
+                            </h3>
+                            <p class="spin-modal-description" data-translate="you_still_have">You still have:</p>
+                        </div>
+                        <div class="spin-modal-texts spin-modal-texts-second">
+                            <h3 class="spin-modal-title" data-translate="you_still_can_win_try_again">
+                                You still can win! Try again!
+                            </h3>
+                            <p class="spin-modal-description" data-translate="you_have">You have</p>
+                        </div>
+                        <div class="spin-modal-counter">
+                            <img src="./assets/images/levin.webp" alt="lightning" class="spin-modal-counter-icon" />
+                            <span class="spin-modal-counter-value" id="spinModalCounterValue">2</span>
+                            <span class="spin-modal-counter-suffix" data-translate="spins">spins</span>
+                        </div>
+                    </div>
+
+                    <div class="spin-modal-final">
+                        <div class="spin-modal-prize">
+                            <img src="./assets/images/prize.webp" alt="prize" class="spin-modal-prize-image" id="spinModalPrizeImage" />
+                        </div>
+                        <h3 class="spin-modal-final-title" data-translate="title_congratulation" data-translate-html>
+                            Congratulations!<br />A personalized offer is now waiting for you!
+                        </h3>
+                        <p class="spin-modal-final-description" data-translate="press_continue">
+                            Just press CONTINUE
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="spin-button-wrapper">
+            <button type="button" class="spin-button" id="spinButton">
+                <span class="spin-button-label spin-button-label-spin" data-translate="spin_now">
+                    SPIN NOW
+                </span>
+                <span class="spin-button-label spin-button-label-continue" data-translate="continue">
+                    Continue
+                </span>
+                <span class="spin-button-icon">⚡️</span>
+            </button>
+        </div>
+    </main>
+</body>
+
+</html>
